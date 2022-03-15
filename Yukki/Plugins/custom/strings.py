@@ -2,14 +2,6 @@ from config import ASSISTANT_PREFIX
 from Yukki import BOT_NAME, BOT_USERNAME
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
-START_TEXT = f"""
-✨ **Hello MENTION !**
-
-**You can use [{BOT_NAME}](https://t.me/{BOT_USERNAME}) to play Music or Videos in your Group Video Chat.**
-
-💡 **Find out all the Bot's commands and how they work by clicking on the ➤ 📚 Commands button**
-"""
-
 COMMANDS_TEXT = f"""
 ✨ **Hello MENTION !**
 
@@ -32,28 +24,6 @@ START_BUTTON_GROUP = InlineKeyboardMarkup(
             ),
             InlineKeyboardButton(
                 text="💬 Support Group", url="https://t.me/AviaxSupport"
-            ),                       
-        ],        
-    ]
-)
-
-START_BUTTON_PRIVATE = InlineKeyboardMarkup(
-    [   [
-            InlineKeyboardButton(
-                text="➕ Add me to Group ➕", url=f"https://t.me/{BOT_USERNAME}?startgroup=true"
-            ),            
-        ],
-        [   
-            InlineKeyboardButton(
-                text="📚 Commands", callback_data="command_menu"
-            ),                       
-        ],
-        [
-            InlineKeyboardButton(
-                text="📣 Updates Channel", url="https://t.me/TechZBots"
-            ),
-            InlineKeyboardButton(
-                text="💬 Support Group", url="https://t.me/TechZBots_Support"
             ),                       
         ],        
     ]
