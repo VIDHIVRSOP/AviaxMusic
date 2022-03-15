@@ -69,36 +69,9 @@ async def welcome(_, message: Message):
                     await save_assistant(message.chat.id, "assistant", assis)
                 else:
                     ran_ass = _assistant["saveassistant"]
-                (
-                    ASS_ID,
-                    ASS_NAME,
-                    ASS_USERNAME,
-                    ASS_ACC,
-                ) = await get_assistant_details(ran_ass)
-                out = start_pannel()
-                await message.reply_text(
-                    f"Welcome To {MUSIC_BOT_NAME}\n\nPromote me as administrator in your group otherwise I will not function properly.\n\nAssistant Username:- @{ASS_USERNAME}\nAssistant ID:- {ASS_ID}",
-                    reply_markup=InlineKeyboardMarkup(out[1]),
-                )
-            if member.id in ASSIDS:
-                return await remove_active_chat(chat_id)
-            if member.id in OWNER_ID:
-                return await message.reply_text(
-                    f"{MUSIC_BOT_NAME}'s Owner[{member.mention}] has just joined your chat."
-                )
-            if member.id in SUDOERS:
-                return await message.reply_text(
-                    f"A member of {MUSIC_BOT_NAME}'s Sudo User[{member.mention}] has just joined your chat."
-                )
             return
         except:
             return
-
-
-@app.on_message(filters.command(["start", f"start@{BOT_USERNAME}", "help", f"help@{BOT_USERNAME}"]) & filters.group)
-@PermissionCheck
-async def useradd(_, message: Message):
-    await start_menu_group(message)
 
 
 @app.on_message(filters.command(["settings", f"settings@{BOT_USERNAME}"]) & filters.group)
