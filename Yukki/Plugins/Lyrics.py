@@ -8,16 +8,7 @@ from youtubesearchpython import VideosSearch
 
 from Yukki import BOT_USERNAME, MUSIC_BOT_NAME, app
 
-__MODULE__ = "Lyrics"
-__HELP__ = """
 
-/Lyrics [Music Name]
-- Searches Lyrics for the particular Music on web.
-
-**Note**:
-Inline button of Lyrics has some bugs. Searches only 50% results. You can use command instead if you want lyrics for any playing music.
-
-"""
 
 
 @app.on_callback_query(filters.regex(pattern=r"lyrics"))
