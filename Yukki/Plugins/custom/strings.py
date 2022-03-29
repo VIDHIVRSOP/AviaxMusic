@@ -20,10 +20,10 @@ START_BUTTON_GROUP = InlineKeyboardMarkup(
         ],
         [
             InlineKeyboardButton(
-                text="📣 Updates Channel", url="https://t.me/YamlokOfficial"
+                text="📣 Updates Channel", url="https://t.me/SOFIA_X_UPDATES"
             ),
             InlineKeyboardButton(
-                text="💬 Support Group", url="https://t.me/AviaxSupport"
+                text="💬 Support Group", url="https://t.me/SOFIASUPPORT"
             ),                       
         ],        
     ]
