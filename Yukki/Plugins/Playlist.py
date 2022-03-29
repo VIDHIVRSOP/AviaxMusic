@@ -22,7 +22,7 @@ from Yukki.Inline import (add_genre_markup, check_genre_markup, check_markup,
 @PermissionCheck
 @AssistantAdd
 async def play_playlist_cmd(_, message):
-    thumb = "Utils/Aviax.jpg"
+    thumb = "Utils/Sofia.jpg"
     await message.delete()
     if not message.reply_to_message:
         if len(message.command) == 2:
